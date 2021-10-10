@@ -1,0 +1,27 @@
+<html>
+
+<head> <title>Dashboard</title></head>
+
+<body>
+    <form method="POST" action="/dashboard" enctype="multipart/form-data">
+
+
+        <!-- <label>Log Date</label>
+        <input type="date" name="date" required><br> <br> -->
+
+        <label><b>Log Content</b></label>
+        <input type="text" name="log_content" required> <br><br>
+
+       
+
+        <label><b>Upload Log File </b></label>
+        <input type="file"  name="filename" />
+
+        <button type="submit" value="register">Submit Log</button>
+
+    </form>
+
+    <a href="/log_out"> Log Out</a>
+
+</body>
+</html>

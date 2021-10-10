@@ -1,0 +1,53 @@
+
+<html>
+    <head>
+        <title>Dashshow</title>
+        <style>
+          table, th, td {
+            border: 1px solid black;
+          }
+          </style>
+    </head>
+
+    <body>
+
+        <h1>Dashshow</h1> <br><br><br>
+
+
+        <table style="width:100%">
+
+          <tr>
+
+            <th> date </th>
+            <th> log </th>
+            <th> file </th>
+            <th> update </th>
+            <th> delete </th>
+            
+          </tr>
+            {% for Log in profile %} 
+            <tr>
+              <td> {{ Log.date }}</td>
+              <td> {{ Log.log }}</td>
+              <!-- <td><img src= {{ Log.fileupload }} ></td> -->
+              <td><img src="data:;base64,{{ fileupload }}"/></td>
+              <td> 
+                <a href ="/update/{{Log.id}}">Update</a>
+              </td>
+              <td>
+                <a href ="/delete/{{Log.id}}">Delete</a>
+              </td>
+            </tr> 
+            {% endfor %}
+            </tr> 
+            
+          </tr>
+
+
+
+        </table>
+<a href="/log_out"> Log Out</a><br><br>
+<a href="/dashboard"> Add Log</a>
+    </body>
+
+</html>
